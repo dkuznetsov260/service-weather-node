@@ -1,0 +1,30 @@
+{
+    "name": "service-weather-node",
+    "version": "1.0.0",
+    "main": "./obj/src/index.js",
+    "typings": "./obj/src/index.d.ts",
+    "scripts": {
+        "test": "mocha -t 5000 -R spec -u tdd --recursive ./obj/test",
+        "start": "node ./bin/run",
+        "build": "tsc"
+    },
+    "dependencies": {
+        "pip-services4-commons-node": "^0.0.*",
+        "pip-services4-components-node": "^0.0.*",
+        "pip-services4-container-node": "^0.0.*",
+        "pip-services4-data-node": "^0.0.*",
+        "pip-services4-expressions-node": "^0.0.*",
+        "pip-services4-http-node": "^0.0.*",
+        "pip-services4-mongodb-node": "^0.0.*",
+        "pip-services4-rpc-node": "^0.0.*",
+        "pip-services4-swagger-node": "^0.0.*"
+    },
+    "devDependencies": {
+        "@types/chai": "^4.0.0",
+        "@types/mocha": "^10.0.1",
+        "@types/node": "*",
+        "chai": "^4.3.4",
+        "mocha": "^10.2.0",
+        "typescript": "^5.8.2"
+    }
+}
