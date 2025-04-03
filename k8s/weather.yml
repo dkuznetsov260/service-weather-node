@@ -14,13 +14,16 @@ spec:
   selector:
     app: weather
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: weather-deploy
 spec:
   replicas: 2
   minReadySeconds: 5
+  selector:
+    matchLabels:
+      app: weather
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -45,3 +48,7 @@ spec:
               key: environment
         - name: MONGO_ENABLED
           value: "true"
+        - name: MONGO_SERVICE_HOST
+          value: "mongo"
+        - name: MONGO_SERVICE_PORT
+          value: "27017"
