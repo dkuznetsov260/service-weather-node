@@ -1,4 +1,4 @@
-FROM node:23
+FROM node:23-slim
 # set working directory
 WORKDIR /app
 # Copy project file
